@@ -1,0 +1,53 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: agendabold, Helvetica, Arial, sans-serif;
+}
+
+.page-container {
+	background-color: $white;
+
+	.main-navbar {
+		.nav-link {
+			color: $white;
+			text-transform: uppercase;
+			font-size: 17px;
+			font-family: agendamedium, Helvetica, Arial, sans-serif;
+		}
+	}
+
+	.header-container {
+		margin-top: 50px;
+	}
+
+	.cta-btn {
+		font-family: agendabold, Helvetica, Arial, sans-serif;
+		font-size:17px;
+		background-color: $white;
+		color:#f33829;
+		text-transform: uppercase;
+		border-radius: 100px;
+		-webkit-box-shadow: 0px 1px 3px 0px rgba(115,115,115,1);
+		-moz-box-shadow: 0px 1px 3px 0px rgba(115,115,115,1);
+		box-shadow: 0px 1px 3px 0px rgba(115,115,115,1);
+	}
+
+	.column-image {
+		img {
+			width: 100%;
+		}
+	}
+
+}
+
+.uobfooter {
+	font-family: FontAwesome, Helvetica, Arial, sans-serif;
+    background-color: $white;
+    /* color: #585858; */
+    /* margin-top: 10px; */
+    /* z-index: 10; */
+    /* position: relative; */
+    /* line-height: 52px; */
+    /* height: 52px; */
+    text-align: center;
+    font-size: 11px;
+    padding: 20px;
+}

@@ -1,0 +1,141 @@
+{{ partial "head" . }}
+
+		<div class="page-container rebate-container">
+			
+			{{ partial "navbar" . }}
+
+	        <div class="header-container">
+	            <div class="container ">
+
+	                <div class="row">
+
+	                    <div class="col-sm-12 col-md-5 col-lg-5 masthead-image">
+	                        <img class="" src="{{ "/img/apply-now-rebate.png" | relURL }}" />
+	                    </div>
+
+	                    <div class="col-sm-12 col-md-6">
+	                        <div class="content content_rebate">
+                                <div class="collapsible-block collapsible-block__generous-rebate">
+                                    <div>
+                                        <div class="content-border calculator">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                	<img class="" src="{{ "/img/icon_petrol.png" | relURL }}" />
+                                                </div>
+                                                <div class="col-lg-8 col-sm-7">
+                                                    <h5 class="rebate-label">Petrol</h5>
+                                                    <span class="text-small d-none d-sm-block">Fuel savings of up to 20.8% at Shell and 24% at SPC</span>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-3 input-cont">
+                                                    <input type="text" id="item-petrol" class="item-input" value="0">
+                                                    <span class="text-small d-block d-sm-none">Fuel savings of up to 20.8% at Shell and 24% at SPC</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                	<img class="" src="{{ "/img/icon_groceries.png" | relURL }}" />
+                                                </div>
+                                                <div class="col-lg-8 col-sm-7">
+                                                    <h5 class="rebate-label">Groceries</h5>
+                                                    <span class="text-small d-none d-sm-block">Additional 0.3% <a class="anchor" href="http://uob.com.sg/smart">SMART$</a> rebate at Cold Storage, Market Place, Jasons, Giant.</span>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-3 input-cont">
+                                                    <input type="text" id="item-groce" class="item-input" value="0">
+                                                    <span class="text-small d-block d-sm-none">Additional 0.5% <a class="anchor" href="http://uob.com.sg/smart">SMART$</a> rebate at Cold Storage, Market Place, Jasons, Giant.</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                	<img class="" src="{{ "/img/icon_dining.png" | relURL }}" />
+                                                </div>
+                                                <div class="col-lg-8 col-sm-7">
+                                                    <h5 class="rebate-label">Dining</h5>
+                                                    <span class="text-small d-none d-sm-block">Up to 50% off with <a class="anchor" href="http://www.uob.com.sg/personal/promotions/lifestyle/dining/index_dining_and_entertainment.html">UOB Dining Privileges</a>.</span>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-3 input-cont">
+                                                    <input type="text" id="item-dining" class="item-input" value="0">
+                                                    <span class="text-small d-block d-sm-none">Up to 50% off with <a class="anchor" href="http://www.uob.com.sg/personal/promotions/lifestyle/dining/index_dining_and_entertainment.html">UOB Dining Privileges</a>.</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                	<img class="" src="{{ "/img/icon_recurring.png" | relURL }}" />
+                                                </div>
+                                                <div class="col-lg-8 col-sm-7">
+                                                    <h5 class="rebate-label">Recurring Bill Payment</h5>
+                                                    <span class="text-medium">(Mobile/broadband, insurance)</span>
+                                                    <br />
+                                                    <span class="text-small d-none d-sm-block">Enjoy rebates with recurring bill payments. <a class="anchor" href="http://www.uob.com.sg/assets/pdfs/personal/cards/billpayment_app.pdf">Click here</a> for form.</span>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-3 input-cont">
+                                                    <input type="text" id="item-recurr" class="item-input" value="0">
+                                                    <span class="text-small d-block d-sm-none">Enjoy rebates with recurring bill payments. <a class="anchor" href="http://www.uob.com.sg/assets/pdfs/personal/cards/billpayment_app.pdf">Click here</a> for form.</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                	<img class="" src="{{ "/img/icon_other.png" | relURL }}" />
+                                                </div>
+                                                <div class="col-lg-8 col-sm-7">
+                                                    <h5 class="rebate-label">Other Spend</h5>
+                                                    <span class="text-medium">(including <a href="http://www.uob.com.sg/web-resources/personal/pdf/personal/cards/credit-cards/uob-supplementary-cards/suppcard-app-form.pdf?ms=google&mt=cpc&s_cid=sg-cpc-paid+search-google-%7bkeyword%7d-SupplementaryCard&vid=pc&utm_source=google&utm_medium=cpc&utm_campaign=&utm_content=SupplementaryCard%3Esg%3Epaid+search&utm_term={keyword}" target="_blank">supplementary card</a> spend)</span>
+                                                    <br />
+                                                    <span class="text-small hidden-xs">Enjoy rebates with overseas spend, and supplementary card spend.</span>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-3 input-cont">
+                                                    <input type="text" id="item-other" class="item-input" value="0">
+                                                    <span class="text-small d-block d-sm-none">Enjoy rebates with overseas spend, and supplementary card spend.</span>
+                                                </div>
+                                            </div>
+                                            <div class="result">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                	<img class="" src="{{ "/img/icon_total_spend.png" | relURL }}" />
+                                                    </div>
+                                                    <div class="col-lg-8 col-sm-7">
+                                                        <h5 >Total Monthly Spend</h5>
+                                                    </div>
+                                                    <div class="col-lg-2 col-sm-3 input-cont">
+                                                        S&#36;<span id="total-spend">0</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                	<img class="" src="{{ "/img/icon_total_rebate.png" | relURL }}" />
+                                                    </div>
+                                                    <div class="col-lg-8 col-sm-7">
+                                                        <h5 >Total Cash Rebate</h5>
+                                                        <span class="text-medium">with your UOB One Card in a year<br />
+                                                    <span id="interest"></span>
+                                                    </div>
+                                                    <div class="col-lg-2 col-sm-3 input-cont">
+                                                        S&#36;<span id="cash-rebate">0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div><a href="#" class="btn btn_calculate center">Calculate my rebate</a>
+                                            </div>
+                                            <div><a href="#" class="btn btn_recalculate center">Recalculate</a>
+                                            </div>
+                                        </div>
+                                        <div class="instructions g-cleared custom-list">
+                                            <!--div><sup>2</sup> Maximum effective interest rate (EIR) on the One Account is 1.60% p.a. for deposits of S$50,000, provided customers meet the criterion of S$500 Card Spend in each calendar month. Maximum effective interest rate (EIR) on the One Account is 2.43% p.a. for deposits of S$50,000, provided customers meet both criteria of S$500 Card Spend AND (a) a min. S$2,000 salary credit via GIRO OR (b) 3 GIRO debits in each calendar month. Visit uob.com.sg/oneaccount for the full set of Terms and Conditions.</div-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                   
+	                    </div>
+
+	                </div>
+
+	            </div>
+	        </div>
+		</div>
+
+{{ partial "scripts" . }}
+
+    <script async src="{{ "/js/rebate-calc.min.js" | relURL }}" type="text/javascript"></script>
+    
+{{ partial "footer" . }}

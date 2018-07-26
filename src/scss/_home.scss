@@ -1,0 +1,49 @@
+
+.home-container {
+	background-color: #0a8da0;
+
+	.masthead-text {
+		
+		margin-top: 100px;
+
+		.headline {
+			text-shadow: 1px 1px 1px rgba(100, 100, 100, 1);
+			font-size: 40px;
+	    	font-family: agendabold, Helvetica, Arial, sans-serif;
+	    	line-height: 1.1;
+	    	text-align: left;
+			color: $white;
+			max-width: 350px;
+			margin-bottom: 20px;
+		}
+
+		.rebates-percentage-image {
+			margin: 100px 0 80px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.rebates-text {
+			color:$white;
+
+			.rebates-text-label {
+				display: block;
+			}
+
+			.rebates-text-percentage {
+				color:#ff7751;
+				font-size: 50px;
+			}
+
+		}
+
+	}
+
+	.masthead-image {
+		padding:100px;
+	}
+
+
+}

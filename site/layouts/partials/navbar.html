@@ -1,0 +1,23 @@
+
+    <nav class="navbar main-navbar navbar-expand-lg">
+
+      <a href="/" class="navbar-brand" ><img src="{{ "img/logo.png" }}" class="logo" title="UOB" alt="UOB"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ .URL }}">
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+
+    </nav>

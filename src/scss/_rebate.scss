@@ -1,0 +1,34 @@
+
+.rebate-container {
+	background-color: #027381;
+
+	.content_rebate {
+		color:$white;
+
+		.calculator {
+
+			.rebate-label {
+				color:#ff7751;
+				margin-bottom: 0;
+				line-height: 0.5;
+			}
+
+			.text-small {
+				font-size: 12px;
+				margin-bottom:0;
+				line-height: 1;
+			}
+
+			a {
+				color:#f33829;
+			}
+
+			.row {
+				margin-bottom: 30px;
+			}
+
+		}
+
+	}
+
+}

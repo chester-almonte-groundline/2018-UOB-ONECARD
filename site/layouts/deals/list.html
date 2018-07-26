@@ -1,0 +1,100 @@
+{{ partial "head" . }}
+
+		<div class="page-container deals-container">
+			
+			{{ partial "navbar" . }}
+
+	        <div class="header-container">
+	            <div class="container ">
+
+	                <div class="row">
+
+	                    <div class="col-sm-12 col-md-6 col-lg-6">
+	                        <img class="" src="{{ "/img/apply-now-deals.png" | relURL }}" />
+	                    </div>
+
+	                    <div class="col-sm-12 col-md-6 col-lg-6">
+	                        <h4 class="headline">1 Million $1 Deals</h4>
+	                        
+	                        <div id="deals-card-list" class="row deals-card-list">
+	                        	<p>Please wait...</p>
+						    </div>                            
+	                    </div>
+
+	                </div>
+
+	            </div>
+	        </div>
+		</div>
+
+{{ partial "scripts" . }}
+
+	<script async src="{{ "/js/jquery.csv.min.js" | relURL }}" type="text/javascript"></script>
+	<script>
+
+		$(document).ready(function() {
+	    	$.ajax({
+		        type: "GET",
+		        url: "/csv/deals.csv",
+		        dataType: "text",
+		        success: processData
+		    });
+	    });
+
+		function processData(source) {
+			var data = $.csv.toObjects(source);
+			var html = generateOrUpdateCards(data);
+			console.log(html);
+			$('#deals-card-list').empty();
+			$('#deals-card-list').html(html);
+		}
+
+		function generateOrUpdateCards(data) {
+
+			var html = '';
+			var rowCount = 0;
+
+			if(typeof(data[0]) === 'undefined') {
+				return null;
+			}
+
+			if(data[0].constructor === Object) {
+
+				for(var row in data) {
+					html += '<div class="col-sm-4 col-md-3 col-lg-3 deals-wrapper">';
+					html += '<div class="deals-card">';
+
+					for(var item in data[row]) {
+						className = 'deals-' + item;
+						className = className.replace(/\s+/g, '-').toLowerCase();
+
+						html += '<div class="'+className+'">';
+						if (item == 'photo') {
+						    html += '<img src="'+data[row][item]+'" />';
+						} else if(item == 'period') {
+							html += 'Period: ' + data[row][item];
+						} else {
+							html += data[row][item];
+						}
+						html += '</div>';
+					}
+					html += '</div>';
+					html += '</div>';
+					rowCount++;
+				}
+
+			}
+
+			if (rowCount <= 0 || !html) {
+				return '<p class="no-items">No deals found</p>';
+			} else {
+				return html;
+			}
+
+			
+
+		}
+
+	</script>
+
+{{ partial "footer" . }}

@@ -1,0 +1,44 @@
+
+.apply-now-container {
+	background-color: #ff7751;
+	color:$white;
+
+	.headline-wrapper {
+
+		margin-bottom: 30px;
+
+		.headline {
+			color:$black;
+			font-size: 80px;
+	    	font-family: agendabold, Helvetica, Arial, sans-serif;
+	    	line-height: 1.1;
+	    	text-align: left;
+			margin-bottom: 0;
+
+		}
+
+	}
+
+	.apply-info {
+
+		margin-bottom: 60px;
+
+		.apply-info-headline {
+	    	font-family: agendabold, Helvetica, Arial, sans-serif;
+			color:#027381;
+		}
+
+		.icon {
+			margin-bottom: 20px;
+		}
+
+		p {
+			color: $black;
+			font-size: 12px;
+		}
+
+	}
+
+
+
+}

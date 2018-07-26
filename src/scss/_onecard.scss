@@ -1,0 +1,141 @@
+.one-card-container {
+	background-color: #11b8cb;
+    padding-bottom:20px;
+
+	.headline {
+
+		font-family: agendabold, Helvetica, Arial, sans-serif;
+    	line-height: 1.1;
+    	text-align: left;
+    	color:$white;
+    	font-size: 40px;
+    	margin-bottom: 30px;
+
+    	.pre-headline {
+    		display: block;
+    	}
+
+		.headline-big {
+			color:$black;
+    		font-size:100px;
+		}
+
+		 .post-headline {
+    		font-size: 30px;
+    	}
+
+    	.headline-icons {
+			font-family: agendabold, Helvetica, Arial, sans-serif;
+			color: $black;
+    		margin-bottom:20px;
+			
+			.label {
+				color:$white;
+			}
+
+    	}
+
+    	.how-it-works {
+    		margin-bottom:20px;
+
+    		.how-it-works-headline {
+    			color:#440b11;
+    		}
+
+    	}
+
+	}
+
+	.text-content {
+		padding:30px 0;
+	}
+
+	.header-container {
+		background-color: #11b8cb;
+	}
+
+	.interest-container {
+		background-color: #f33829;
+
+		.savings-stack-up {
+
+			.savings-stack-up-headline {
+				text-transform: uppercase;
+			}
+
+			.savings-stack-up-desc {
+				color: $white;
+			}
+
+			.table {
+
+				td {
+
+					border: none;
+
+					&.description {
+
+						h1,h2,h3,h4,h5,h6 {
+							color: $white;
+							margin-bottom: 0;
+						}
+
+					}
+
+					&.price {
+
+						h1,h2,h3,h4,h5,h6 {
+							font-weight: normal;
+							font-family: helvetica;
+							color: $white;
+							margin-bottom: 0;
+						}
+
+					}
+
+				}
+
+				
+			}
+
+		}
+	}
+
+	.additional-rebate-container {
+
+		background-color: #440b11;
+
+		.headline {
+			color:#ff7751;
+			text-transform: uppercase;
+			margin-bottom: 0;
+		}
+
+		p {
+			color: $white;
+		}
+
+	}
+
+	.pay-container {
+		background-color: #FFFFFF;
+
+		.headline {
+			color: #ff7751;
+			text-transform: uppercase;
+		}
+
+		.text-content {
+
+			img {
+				margin:10px 0;
+			}
+
+			p {
+				margin-top: 10px;
+				color: #0eb9cb;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,55 @@
+
+.deals-container {
+	background-color: #440b11;
+
+	.headline {
+		color:#ff7751;
+		font-family: agendabold, Helvetica, Arial, sans-serif;
+    	line-height: 1.1;
+    	text-align: left;
+		margin-bottom:20px;
+	}
+
+	.deals-card-list {
+
+		color: $black;
+
+		.deals-wrapper {
+
+			.deals-card {
+				background-color: $white;
+				padding:5px;
+				text-align: center;
+				font-size: 12px;
+				min-height:150px;
+				position: relative;
+				margin-bottom: 10px;
+
+				.deals-photo {
+					padding:5px;
+					img {
+						width: 100%;
+					}
+				}
+
+				.deals-description {
+					color:$black;
+					font-size: 11px;
+					margin-bottom:50px;
+				}
+
+				.deals-period {
+					color: #027381;
+
+				}
+
+				.deals-count {
+					color:#f33829;
+
+				}
+			}
+		}
+
+	}
+
+}

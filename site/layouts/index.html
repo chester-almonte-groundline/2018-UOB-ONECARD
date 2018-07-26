@@ -1,0 +1,35 @@
+{{ partial "head" . }}
+
+		<div class="page-container home-container">
+
+			{{ partial "navbar" . }}
+
+	        <div class="masthead-container">
+	            <div class="container ">
+
+	                <div class="row">
+
+	                    <div class="col-sm-12 col-md-4 col-lg-5 masthead-image">
+	                        <img class="" src="{{ "/img/card-1.png" | relURL }}" />
+	                    </div>
+
+	                    <div class="col-sm-12 col-md-8 col-lg-7 masthead-text">
+	                        <h4 class="headline">The most generous rebate card now gives you a million more perks</h4>
+	                        <div class="row">
+	                        	<div class="offset-md-1 offset-lg-1 col-sm-12 col-md-11 col-lg-11">
+			                        <a href="#" class="btn cta-btn">Find Out More<a/>
+			                        <div class="rebates-percentage-image">
+			                        	<img class="" src="{{ "/img/rebates-percentage.png" | relURL }}" />
+			                        </div>
+		                        </div>
+	                        </div>                               
+	                    </div>
+
+	                </div>
+
+	            </div>
+	        </div>
+		</div>
+
+{{ partial "scripts" . }}
+{{ partial "footer" . }}

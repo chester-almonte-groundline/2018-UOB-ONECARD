@@ -1,0 +1,95 @@
+# Site settings
+# --------------
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ .Site.Params.myvariable }}.
+baseurl = "/" # The subpath of your site, e.g. / or /blog
+languageCode = "en-us"
+languageLang = "en"
+defaultContentLanguage = "en"
+title = "Credit Card | UOB Singapore"
+
+# Build settings
+# --------------
+
+# Set the destination the same as the Gulpfile for consistency
+destination = "../dist/"
+
+# Categories and tags disabled for an easier start
+# https://gohugo.io/getting-started/configuration/#toml-configuration
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+# Enable this to have links relativized by Hugo
+# E.g,  if your /post/first/ page contains a link 
+# to /about/, Hugo will rewrite the URL to ../../about/
+relativeURLs = false
+
+# Enable to have links open in new tab
+hrefTargetBlank = false
+
+# Enable rendering of Emojis in markdown
+enableEmoji = true
+
+# Site Params
+# -------------
+[params]
+description = '''
+Singapore's most generous rebate card, now with bigger fuel savings! Earn up to S$600 rebates annually on everything you buy, every time, everywhere.
+'''
+author = "UOB Singapore"
+
+# Site Menus
+# See the Hugo docs for usage in layouts
+# https://gohugo.io/content-management/menus/
+
+[[menu.main]]
+  name = "One Card"
+  weight = 1
+  identifier = "one-card"
+  url = "/one-card"
+[[menu.main]]
+  name = "Rebate Calculator"
+  weight = 2
+  identifier = "rebate-calculator"
+  url = "/rebate-calculator"
+[[menu.main]]
+  name = "Priviliges"
+  weight = 3
+  identifier = "priviliges"
+  url = "/priviliges"
+[[menu.main]]
+  name = "1 Mmillion $1 deals"
+  weight = 4
+  identifier = "deals"
+  url = "/deals"
+[[menu.main]]
+  name = "Apply Now"
+  weight = 5
+  identifier = "apply-now"
+  url = "/apply-now"
+
+# Related Content
+# ---------------
+# Enable the options below to use Hugo's related
+# pages feature for related posts, etc.
+# https://gohugo.io/content-management/related/
+# [related]
+#   includeNewer = true
+#   threshold = 10
+#   toLower = true
+#[[related.indices]]
+#   name = "Section"
+#   weight = 200
+#[[related.indices]]
+#   name = "keywords"
+#   weight = 150
+#[[related.indices]]
+#   name = "categories"
+#   weight = 150
+#[[related.indices]]
+#   name = "tags"
+#   weight = 100
+#[[related.indices]]
+#   name = "date"
+#   pattern = "2006"
+#   weight = 10
+
