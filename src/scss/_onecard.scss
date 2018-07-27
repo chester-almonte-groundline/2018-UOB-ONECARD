@@ -2,6 +2,32 @@
 	background-color: #11b8cb;
     padding-bottom:20px;
 
+    .one-card-sidebar-nav {
+    	background-color: #015660;
+    	max-width: 250px;
+    	position: relative;
+    	padding:20px;
+
+    	a {
+    		font-family: agendabold, Helvetica, Arial, sans-serif;
+    		color:$white;
+    		cursor: pointer;
+    	}
+
+    }
+
+    .masthead-nav {
+    	position: fixed;
+    	top:200px;
+    	z-index: 9999;
+
+    	.card-bg {
+    		position: absolute;
+    		left:-200px;
+    		top:0;
+    	}
+    }
+
 	.headline {
 
 		font-family: agendabold, Helvetica, Arial, sans-serif;
@@ -20,7 +46,7 @@
     		font-size:100px;
 		}
 
-		 .post-headline {
+		.post-headline {
     		font-size: 30px;
     	}
 

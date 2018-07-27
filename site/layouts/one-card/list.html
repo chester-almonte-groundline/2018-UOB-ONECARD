@@ -4,13 +4,38 @@
 			
 			{{ partial "navbar" . }}
 
-	        <section class="header-container">
+	        <section id="header-container" class="header-container">
 	            <div class="container ">
 
 	                <div class="row">
 
-	                    <div class="col-sm-12 col-md-6 masthead-image">
-	                        <img class="" src="{{ "/img/card-1.png" | relURL }}" />
+	                    <div class="col-sm-12 col-md-6 ">
+	                    	<div class="masthead-nav">
+
+		                        <img class="card-bg" src="{{ "/img/card-1.png" | relURL }}" />
+
+		                        <div class="one-card-sidebar-nav">
+
+			                        <ul id="one-card-sidebar-nav" class="nav flex-column">
+									  <li class="nav-item">
+									    <a class="nav-link" data-id="header-container">5% Cash rebate</a>
+									  </li>
+									  <li class="nav-item">
+									    <a class="nav-link" data-id="interest-container">3.33% One Account</a>
+									  </li>
+									  <li class="nav-item">
+									    <a class="nav-link" data-id="additional-rebate-container">UOB SMART$ Rebate Programme</a>
+									  </li>
+									  <li class="nav-item">
+									    <a class="nav-link disabled" data-id="pay-container">Payment Modes</a>
+									  </li>
+									</ul>
+
+									<button class="cta-btn btn">APPLY NOW</button>
+								</div>
+							</div>
+
+
 	                    </div>
 
 	                    <div class="col-sm-12 col-md-5 col-lg-5">
@@ -41,7 +66,7 @@
 	            </div>
 	        </section>
 
-	        <section class="interest-container">
+	        <section id="interest-container" class="interest-container">
 	            <div class="container ">
 
 	                <div class="row">
@@ -176,7 +201,7 @@
 	            </div>
 	        </section>
 
-	        <section class="additional-rebate-container">
+	        <section id="additional-rebate-container" class="additional-rebate-container">
 	            <div class="container ">
 
 	                <div class="row">
@@ -199,7 +224,7 @@
 	            </div>
 	        </section>
 
-	        <section class="pay-container">
+	        <section id="pay-container" class="pay-container">
 	            <div class="container ">
 
 	                <div class="row">
@@ -232,4 +257,13 @@
 		</div>
 
 {{ partial "scripts" . }}
+		<script>
+			$( ".one-card-sidebar-nav .nav-link" ).click(function() {
+				section = $(this).data("id");
+			  	$('html,body').animate({
+			        scrollTop: $("#" + section).offset().top
+			    }, 'slow');
+			});
+
+		</script>
 {{ partial "footer" . }}
