@@ -9,18 +9,36 @@ var interest = 0;
 
 $(document).ready(function() {
 
-	//$('.item-input').numeric();
-	$('.item-input').on('focusin', function(e) {
+	$('.rebate-container .item-input').keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+             // Allow: Ctrl+A, Command+A
+            (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+             // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+
+	$('.rebate-container .item-input').on('focusin', function(e) {
 		if ($(this).val() <= 0) {
 			$(this).val('');
 		}
 	});
-	$('.item-input').on('focusout', function(e) {
+	$('.rebate-container .item-input').on('focusout', function(e) {
 		if ($(this).val() == '' || $(this).val() <= 0) {
 			$(this).val(0);
 		} else {
 			$(this).val(parseFloat($(this).val(), 10));
 		}
+	});
+	$( ".rebate-container .item-input" ).keyup(function() {
+	  	rebate_calc();
 	});
 	$('.btn_calculate').on('click', function(e) {
 		e.preventDefault();
